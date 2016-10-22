@@ -219,14 +219,14 @@ Use lowercase letters in variable, action, and function names (never `camelCase`
 function some_name( $some_variable ) { [...] }
 ```
 
-Class names should use capitalized words separated by underscores. Any acronyms should be all upper case.
+Class names should use capitalized words separated by underscores. Any acronyms should be all uppercase.
 
 ```php
 class Walker_Category extends Walker { [...] }
 class WP_HTTP { [...] }
 ```
 
-Constants should be in all upper-case with underscores separating words:
+Constants should be in all uppercase with underscores separating words:
 
 ```php
 define( 'DOING_AJAX', true );
