@@ -144,13 +144,17 @@ $term .= 'X'
 Put spaces on both sides of the opening and closing parenthesis of `if`, `elseif`, `foreach`, `for`, and `switch` blocks.
 
 ```php
-foreach ( $foo as $bar ) { ...
+foreach ( $foo as $bar ) {
+	...
+}
 ```
 
 When defining a function, do it like so:
 
 ```php
-function my_function( $param1 = 'foo', $param2 = 'bar' ) { ...
+function my_function( $param1 = 'foo', $param2 = 'bar' ) {
+	...
+}
 ```
 
 When calling a function, do it like so:
@@ -162,14 +166,17 @@ my_function( $param1, func_param( $param2 ) );
 When performing logical comparisons, do it like so:
 
 ```php
-if ( ! $foo ) { ...
+if ( ! $foo ) {
+	...
+}
 ```
 
 When [type casting](http://www.php.net/manual/en/language.types.type-juggling.php#language.types.typecasting), do it like so:
 
 ```php
-foreach ( (array) $foo as $bar ) { ...
- 
+foreach ( (array) $foo as $bar ) {
+	...
+}
 $foo = (boolean) $bar;
 ```
 
