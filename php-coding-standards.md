@@ -6,7 +6,104 @@ Keep the following points in mind when writing PHP code for WordPress, whether f
 
 See also: [PHP Documentation Standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/).
 
-## PHP
+## Declare Statements, Namespace, and Use Declarations
+
+The header of a PHP file may consist of a number of different blocks. If present, each of the blocks below MUST be separated by a single blank line, and MUST NOT contain a blank line. Each block MUST be in the order listed below, although blocks that are not relevant may be omitted.
+
+* File-level docblock.
+* One or more declare statements.
+* The namespace declaration of the file.
+* One or more class-based `use` statements.
+* One or more function-based `use` statements.
+* One or more constant-based `use` statements.
+* The remainder of the code in the file.
+* When a file contains a mix of HTML and PHP, any of the above sections may still be used. If so, they MUST be present at the top of the file, even if the remainder of the code consists a closing PHP tag and then a mixture of HTML and PHP.
+
+When the opening `<?php` tag is on the first line of the file, it MUST be on its own line with no other statements unless it is a file containing markup outside of PHP opening and closing tags.
+
+The following example illustrates a complete list of all blocks:
+
+```php
+<?php
+/**
+ * This file contains an example of coding styles.
+ *
+ * @package ...
+ */
+
+declare(strict_types=1);
+
+namespace Vendor\Package;
+
+use Vendor\Package\{ClassA as A, ClassB, ClassC as C};
+use Vendor\Package\Namespace\ClassD as D;
+use Vendor\Package\AnotherNamespace\ClassE as E;
+
+use function Vendor\Package\{functionA, functionB, functionC};
+use function Another\Vendor\function D;
+
+use const Vendor\Package\{CONSTANT_A, CONSTANT_B, CONSTANT_C};
+use const Another\Vendor\CONSTANT_D;
+
+/**
+ * FooBar is an example class.
+ */
+class FooBar {
+    // ... additional PHP code ...
+}
+```
+
+Compound namespaces with a depth of more than two MUST not be used. Therefore the following is the maximum compounding depth allowed:
+
+```php
+<?php
+
+use Vendor\Package\Namespace\{
+    SubnamespaceOne\ClassA,
+    SubnamespaceOne\ClassB,
+    SubnamespaceTwo\ClassY,
+    ClassZ,
+};
+```
+
+And the following would not be allowed:
+
+```php
+<?php
+
+use Vendor\Package\Namespace\{
+    SubnamespaceOne\AnotherNamespace\ClassA,
+    SubnamespaceOne\ClassB,
+    ClassZ,
+};
+```
+
+When wishing to declare strict types in files containing markup outside PHP opening and closing tags MUST, on the first line, include an opening PHP tag, the strict types declaration and closing tag.
+
+For example:
+
+```php
+<?php declare(strict_types=1); ?>
+<html>
+<body>
+    <?php
+        // ... additional PHP code ...
+    ?>
+</body>
+</html>
+```
+
+Declare statements MUST contain no spaces and MUST look like `declare(strict_types=1);`.
+
+Block declare statements are allowed and MUST be formatted as below. Note position of braces and spacing:
+
+```php
+declare(ticks=1) {
+    //some code
+}
+```
+
+## General Syntax
 
 ### Single and Double Quotes
 
