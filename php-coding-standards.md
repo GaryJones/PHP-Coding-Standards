@@ -31,7 +31,7 @@ The following example illustrates a complete list of all blocks:
  * @package ...
  */
 
-declare(strict_types=1);
+declare( strict_types = 1 );
 
 namespace Vendor\Package;
 
@@ -83,7 +83,7 @@ When wishing to declare strict types in files containing markup outside PHP open
 For example:
 
 ```php
-<?php declare(strict_types=1); ?>
+<?php declare( strict_types = 1 ); ?>
 <html>
 <body>
     <?php
@@ -93,12 +93,12 @@ For example:
 </html>
 ```
 
-Declare statements MUST contain no spaces and MUST look like `declare(strict_types=1);`.
+Declare statements MUST contain spaces and MUST look like `declare( strict_types = 1 );`.
 
 Block declare statements are allowed and MUST be formatted as below. Note position of braces and spacing:
 
 ```php
-declare(ticks=1) {
+declare( ticks = 1 ) {
     //some code
 }
 ```
