@@ -360,7 +360,7 @@ While this operator does exist in Core, it is often used lazily instead of doing
 
 Per [#22400](https://core.trac.wordpress.org/ticket/22400):
 
-> extract() is a terrible function that makes code harder to debug and harder to understand. We should discourage it’s use and remove all of our uses of it.
+> extract() is a terrible function that makes code harder to debug and harder to understand. We should discourage it’s [sic] use and remove all of our uses of it.
 >
 > Joseph Scott has [a good write-up of why it’s bad](http://josephscott.org/archives/2009/02/i-dont-like-phps-extract-function/).
 
