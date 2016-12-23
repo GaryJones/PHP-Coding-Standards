@@ -213,7 +213,7 @@ If you must touch the database, get in touch with some developers by posting a m
 
 ### Naming Conventions
 
-Use lowercase letters in variable, action, and function names (never camel case). Separate words via underscores. Don’t abbreviate variable names un-necessarily; let the code be unambiguous and self-documenting.
+Use lowercase letters in variable, action, and function names (never `camelCase`). Separate words via underscores. Don’t abbreviate variable names unnecessarily; let the code be unambiguous and self-documenting.
 
 ```php
 function some_name( $some_variable ) { [...] }
