@@ -147,25 +147,25 @@ Put spaces on both sides of the opening and closing parenthesis of `if`, `elseif
 foreach ( $foo as $bar ) { ...
 ```
 
-When using case statements, do it like so:
+When using `case` statements, do it like so:
 
 ```php
 
-switch ($i) {
+switch ( $i ) {
     case 1:
-        echo "i equals 1";
+        echo 'i equals 1';
         break;
     case 2:
-        echo "i equals 2";
+        echo 'i equals 2';
         break;
-    case 3 : // incorrect, do not include a space before the colon
-        echo "i equals 2";
+    case 3 : // Incorrect, do not include a space before the colon.
+        echo 'i equals 2';
         break;
-    case 4; // incorrect, use colons not semicolons
-        echo "i equals 2";
+    case 4; // Incorrect, use colons not semicolons.
+        echo 'i equals 2';
         break;
     default:
-       echo "i is not equal to 0, 1 or 2";
+       echo 'i is not equal to 0, 1 or 2';
 }
 
 ```
