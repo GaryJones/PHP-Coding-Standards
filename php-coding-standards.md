@@ -166,7 +166,6 @@ switch ( $i ) {
     default:
        echo '$i is not equal to 0, 1 or 2';
 }
-
 ```
 
 When defining a function, do it like so:
